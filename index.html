@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Moisture Sensor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center" style="background-color:#33cccc">
+        <h1 style="color: white"><img id="logo" src="images/watersaver.png" width="80px">Water Saver</h1>
+        <h1 style="color: white"><img id="logo" src="images/logo.png" width="80px">Water Saver</h1>
+    </div>
+    <div class="text-center">
+        <img id="myImage" onclick="changeImage()" src="https://banner2.cleanpng.com/20180627/awi/kisspng-incandescent-light-bulb-animated-film-cartoon-lamp-bulb-icon-5b33d98f2391a4.6492994015301246871457.jpg"
+            width="100" height="180" style="cursor: pointer">
+
+        <p>Click the light bulb to turn on/off the light.</p>
+    </div>
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("https://images.vexels.com/media/users/3/146895/isolated/preview/5e9d3222fa9269213c6747474cba1209-light-bulb-design-by-vexels.png")) {
+                image.src = "https://banner2.cleanpng.com/20180627/awi/kisspng-incandescent-light-bulb-animated-film-cartoon-lamp-bulb-icon-5b33d98f2391a4.6492994015301246871457.jpg";
+            } else {
+                image.src = "https://images.vexels.com/media/users/3/146895/isolated/preview/5e9d3222fa9269213c6747474cba1209-light-bulb-design-by-vexels.png"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
