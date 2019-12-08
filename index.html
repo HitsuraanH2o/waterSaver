@@ -21,7 +21,7 @@
 <body>
     <div class="container-sm">
         <div id="header" class="jumbotron text-center" style="background-color:#33cccc">
-            <h1 style="color: white"><img id="logo" src="images/watersaver.png" width="80px">&nbsp;Wate Tank Monitoring
+            <h1 style="color: white"><img id="logo" src="./images/watersaver.png" width="80px">&nbsp;Water Tank Monitoring
                 System</h1>
             <h4>"Save Water, Save Life"</h4>
         </div>
@@ -32,13 +32,13 @@
                         <button class="btn btn-info btn-sm" type="button" onclick="switch1()">
                             <img id="switch1" src="./images/off.png" width="50" height="50" style="cursor: pointer">
                         </button>
-                        <p id="switch_status1">Switch 1 is off</p>
+                        <p id="switch_status1">Tank 1 motor is now off</p>
                     </div>
                     <div class="col-5">
                         <button class="btn btn-info btn-sm" type="button" onclick="switch2()">
                             <img id="switch2" src="./images/off.png" width="50" height="50" style="cursor: pointer">
                         </button>
-                        <p id="switch_status2">Switch 2 is off</p>
+                        <p id="switch_status2">Tank 2 motor is now off</p>
                     </div>
                 </div>
                 <div class="row">
@@ -53,10 +53,10 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <h5 id="status_tank2">Status: Tank is empty</h5>
+                        <h5 id="status_tank1">Status: Tank 1 is empty</h5>
                     </div>
                     <div class="col-5">
-                        <h5 id="status_tank2">Status: Tank is empty</h5>
+                        <h5 id="status_tank2">Status: Tank 2 is empty</h5>
                     </div>
                 </div>
             </center>
@@ -68,35 +68,8 @@
             </div>
         </footer>
     </div>
-
-    <script>
-
-        function switch1() {
-            var image = document.getElementById('switch1');
-            if (image.src.match("./images/off.png")) {
-                image.src = "./images/on.png";
-                document.getElementById("switch_status1").innerHTML = "Switch 1 is on";
-            } else {
-                image.src = "./images/off.png";
-                document.getElementById("switch_status1").innerHTML = 'Switch 1 is off';
-            }
-        }
-
-        function switch2() {
-            var image = document.getElementById('switch2');
-            if (image.src.match("./images/off.png")) {
-                image.src = "./images/on.png";
-                document.getElementById("switch_status2").innerHTML = "Switch 2 is on";
-            } else {
-                image.src = "./images/off.png";
-                document.getElementById("switch_status2").innerHTML = "Switch 2 is off";
-            }
-        }
-
-    </script>
-
     <script src="scripts/browserMqtt.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/controller.js"></script>
 </body>
 
 </html>
